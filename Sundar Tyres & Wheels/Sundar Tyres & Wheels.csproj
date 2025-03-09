@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <None Remove="Resources\Images\Close.png" />
+    <None Remove="Resources\Images\eye.png" />
+    <None Remove="Resources\Images\hidden.png" />
     <None Remove="Resources\Images\LoginPage.png" />
     <None Remove="Resources\Images\Logo.png" />
     <None Remove="Resources\Images\Maximize.png" />
@@ -19,6 +21,12 @@
 
   <ItemGroup>
     <Resource Include="Resources\Images\Close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\eye.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\hidden.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\LoginPage.png">
@@ -36,11 +44,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Styles\" />
+    <Folder Include="Components\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="MySql.Data" Version="9.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

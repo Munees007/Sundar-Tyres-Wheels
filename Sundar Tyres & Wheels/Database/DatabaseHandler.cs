@@ -9,7 +9,7 @@ namespace Sundar_Tyres___Wheels.Database
         public static DatabaseHandler Instance => _instance.Value;
 
         private MySqlConnection _connection;
-        private readonly string _connectionString = "Server=mw.c3kmsoeogow5.us-east-2.rds.amazonaws.com;Port=3306;Database=temp;User Id=munees;Password=Muneeswaran8072.p;";
+        private readonly string _connectionString = "Server=mw.c3kmsoeogow5.us-east-2.rds.amazonaws.com;Port=3306;Database=sundar_tyres;User Id=munees;Password=Muneeswaran8072.p;";
 
         private DatabaseHandler()
         {

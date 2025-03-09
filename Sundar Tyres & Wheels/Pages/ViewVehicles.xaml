@@ -1,0 +1,32 @@
+﻿<Page x:Class="Sundar_Tyres___Wheels.Pages.ViewVehicles"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sundar_Tyres___Wheels.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViewVehicles">
+
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Grid Width="250" Height="30">
+                    <TextBox Name="txtSearch" Width="250" Height="30" VerticalAlignment="Top"
+                         GotFocus="txtSearch_GotFocus" LostFocus="txtSearch_LostFocus"/>
+                    <TextBlock Name="txtPlaceholder" Text="Search by Vehicle No or Contact"
+                           Foreground="Gray" VerticalAlignment="Center" Margin="5,0,0,0"
+                           IsHitTestVisible="False"/>
+                </Grid>
+
+                <Button Content="Search" Width="100" Height="30" Click="SearchVehicle_Click"/>
+                <Button Content="Refresh" Width="100" Height="30" Click="loadVehicle_Click"/>
+            </StackPanel>
+
+            <DataGrid Name="dgVehicles" AutoGenerateColumns="True" Height="350" Margin="5"
+                  SelectionMode="Single" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+
+</Page>

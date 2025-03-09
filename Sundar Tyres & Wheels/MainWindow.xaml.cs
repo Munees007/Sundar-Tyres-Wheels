@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Sundar_Tyres___Wheels.Database;
+using Sundar_Tyres___Wheels.Helper;
+using Sundar_Tyres___Wheels.Pages;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,59 +20,24 @@ namespace Sundar_Tyres___Wheels
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-            DatabaseHandler.Instance.openConnection();
-            FetchData();
-        }
-
-        private void AddTempData()
-        {
-            
-        }
-
-        private void FetchData()
-        {
-            
-            string query = "SELECT * FROM user";
-            MySqlCommand cmd = new(query, DatabaseHandler.Instance.Connection);
-
-            try
+            //DatabaseHandler.Instance.openConnection();
+            if(Properties.Settings.Default.IsLogin==true)
             {
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    MessageBox.Show("Data: " + reader["name"]);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Query Error: " + ex.Message);
-            }
-        }
-
-        public void close_window(object sender, EventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        public void minimize_window(object sender, EventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
-
-        public void maximize_window(Object sender, EventArgs e)
-        {
-            if (this.WindowState == WindowState.Maximized)
-            {
-                this.WindowState = WindowState.Normal;
+                HomeWindow homeWindow = new HomeWindow();
+                homeWindow.Show();
             }
             else
             {
-                this.WindowState = WindowState.Maximized;
+                Login login = new Login();
+                login.Show();
             }
+            this.Close();
         }
+
+        
     }
 }

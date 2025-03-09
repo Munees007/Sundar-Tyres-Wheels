@@ -1,0 +1,63 @@
+﻿<Page x:Class="Sundar_Tyres___Wheels.Pages.AddVehicle"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sundar_Tyres___Wheels.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddVehicle">
+
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+
+            <!-- Vehicle Details -->
+            <GroupBox Header="Vehicle Details" Margin="5">
+                <StackPanel>
+                    <Label Content="Vehicle No:" />
+                    <TextBox Name="txtVehicleNo" Width="250"/>
+
+                    <Label Content="Description:" />
+                    <TextBox Name="txtDescription" Width="250"/>
+
+                    <Label Content="Driver:" />
+                    <TextBox Name="txtDriver" Width="250"/>
+
+                    <CheckBox Name="chkIsInactive" Content="Is Inactive" />
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Model Details -->
+            <GroupBox Header="Model Details" Margin="5">
+                <StackPanel>
+                    <Label Content="Model Code:" />
+                    <TextBox Name="txtModelCode" Width="250"/>
+
+                    <Label Content="Vehicle Make:" />
+                    <TextBox Name="txtVehicleMake" Width="250"/>
+
+                    <Label Content="Vehicle Model:" />
+                    <TextBox Name="txtVehicleModel" Width="250"/>
+
+                    <Label Content="MFG Year:" />
+                    <TextBox Name="txtMfgYear" Width="250"/>
+
+                    <Label Content="Model Name:" />
+                    <TextBox Name="txtModelName" Width="250"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- General Details -->
+            <GroupBox Header="General Details" Margin="5">
+                <StackPanel>
+                    <Label Content="Customer Contact:" />
+                    <TextBox Name="txtCustomerContact" Width="250"/>
+                </StackPanel>
+            </GroupBox>
+
+
+            <!-- Submit Button -->
+            <Button Click="SubmitButton_Click" Content="Submit" Width="100" Margin="5" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>

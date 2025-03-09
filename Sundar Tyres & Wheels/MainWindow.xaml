@@ -1,46 +1,10 @@
 ﻿<Window x:Class="Sundar_Tyres___Wheels.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
-        Title="MainWindow" Height="450" Width="800"
-        ResizeMode="CanResize">
+        
+        IsEnabled="False"
+        Title="MainWindow" Height="500" Width="800"
+        >
 
-    <WindowChrome.WindowChrome>
-        <WindowChrome CornerRadius="20" GlassFrameThickness="0" CaptionHeight="0"/>
-    </WindowChrome.WindowChrome>
-
-    <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Resources/Images/LoginPage.png"/>
-    </Window.Background>
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <!-- Top Bar -->
-        <Grid Grid.Row="0" Name="Move" Background="#006D77">
-            <StackPanel Margin="0,0,10,0" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Style="{StaticResource DisabledButtonStyle}" Click="minimize_window" BorderThickness="0" Margin="5,0" Width="20" Background="Transparent" IsEnabled="False">
-                    <Image Source="pack://application:,,,/Resources/Images/Minimize.png"/>
-                </Button>
-                <Button Style="{StaticResource DisabledButtonStyle}" IsEnabled="False" Click="maximize_window" BorderThickness="0" Margin="5,0" Width="20" Background="Transparent">
-                    <Image Source="pack://application:,,,/Resources/Images/Maximize.png"/>
-                </Button>
-                <Button Style="{StaticResource HoverScaleAnimation}" Click="close_window" BorderThickness="0" Margin="5,0" Width="20" Background="Transparent">
-                    <Image Source="pack://application:,,,/Resources/Images/Close.png"/>
-                </Button>
-            </StackPanel>
-        </Grid>
-
-        <!-- Logo -->
-        <Image Grid.Row="1" Source="pack://application:,,,/Resources/Images/Logo.png" HorizontalAlignment="Center"/>
-
-        <!-- Responsive Login Form -->
-        <Button Grid.Row="2">Text DB</Button>
-
-    </Grid>
+    
 </Window>
